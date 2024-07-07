@@ -1,0 +1,30 @@
+let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+
+// calculate difference between last and first elements
+function calculateDifference(arr) {
+    return arr[arr.length - 1] - arr[0];
+}
+
+// Function to calculate average age
+function calculateAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+// calculate difference
+let difference = calculateDifference(ages);
+console.log(`The difference between the last and first elements is: ${difference}`);
+
+// Add a new age to the array
+ages.push(29);
+
+// Recalculate difference dynamically
+let newDifference = calculateDifference(ages);
+console.log(`After adding a new age, the difference is: ${newDifference}`);
+
+// Calculate average age using a loop
+let averageAge = calculateAverage(ages)
+console.log(`The average age is: ${averageAge}`);
